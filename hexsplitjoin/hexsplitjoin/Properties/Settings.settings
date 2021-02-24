@@ -2,10 +2,10 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="hexsplitjoin.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="defaultSource" Type="System.String" Scope="User">
+    <Setting Name="defaultSource" Type="System.String" Scope="Application">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="defaultDestionation" Type="System.String" Scope="User">
+    <Setting Name="defaultDestionation" Type="System.String" Scope="Application">
       <Value Profile="(Default)" />
     </Setting>
   </Settings>

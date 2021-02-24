@@ -87,6 +87,13 @@ namespace hexsplitjoin
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Properties.Settings.Default.Reload();
+        }
+
+        private void ConfigurationbindingSource_AddingNew(object sender, AddingNewEventArgs e)
+        {
+            configurationDataSet1.Configuration.SourceFilePathColumn.DefaultValue = defaultSourcePath.Text;
+            configurationDataSet1.Configuration.DestinationFilePathColumn.DefaultValue = defaultDestinationPath.Text;
         }
     }
 }

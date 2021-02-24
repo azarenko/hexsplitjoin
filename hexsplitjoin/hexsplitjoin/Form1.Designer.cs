@@ -41,8 +41,6 @@
             this.executeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ConfigurationbindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.ConfigurationbindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.configurationDataSet1 = new hexsplitjoin.ConfigurationDataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -60,22 +58,24 @@
             this.defaultDestinationPath = new System.Windows.Forms.ToolStripTextBox();
             this.ConfigurationdataGridView = new System.Windows.Forms.DataGridView();
             this.SectionName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog2 = new System.Windows.Forms.SaveFileDialog();
             this.sourceFilePathDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sourceStartAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sourceEndAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sourceLenghtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.destinationFilePathDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.destinationStartAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
-            this.saveFileDialog2 = new System.Windows.Forms.SaveFileDialog();
+            this.ConfigurationbindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.configurationDataSet1 = new hexsplitjoin.ConfigurationDataSet();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ConfigurationbindingNavigator)).BeginInit();
             this.ConfigurationbindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ConfigurationdataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConfigurationbindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.configurationDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ConfigurationdataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -143,7 +143,7 @@
             // executeToolStripMenuItem
             // 
             this.executeToolStripMenuItem.Name = "executeToolStripMenuItem";
-            this.executeToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.executeToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.executeToolStripMenuItem.Text = "Execute";
             this.executeToolStripMenuItem.Click += new System.EventHandler(this.executeToolStripMenuItem_Click);
             // 
@@ -190,21 +190,11 @@
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
-            // ConfigurationbindingSource
-            // 
-            this.ConfigurationbindingSource.DataMember = "Configuration";
-            this.ConfigurationbindingSource.DataSource = this.configurationDataSet1;
-            // 
-            // configurationDataSet1
-            // 
-            this.configurationDataSet1.DataSetName = "ConfigurationDataSet";
-            this.configurationDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
+            this.bindingNavigatorCountItem.Text = "для {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
             // bindingNavigatorDeleteItem
@@ -333,6 +323,23 @@
             this.SectionName.HeaderText = "SectionName";
             this.SectionName.Name = "SectionName";
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.Filter = "Configuration|*.xml";
+            // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.FileName = "Configuration.xml";
+            this.saveFileDialog1.Filter = "Configuration|*.xml";
+            // 
+            // openFileDialog2
+            // 
+            this.openFileDialog2.Filter = "Binary files|*.bin";
+            // 
+            // saveFileDialog2
+            // 
+            this.saveFileDialog2.Filter = "Binary files|*.bin";
+            // 
             // sourceFilePathDataGridViewTextBoxColumn
             // 
             this.sourceFilePathDataGridViewTextBoxColumn.DataPropertyName = "SourceFilePath";
@@ -369,22 +376,16 @@
             this.destinationStartAddressDataGridViewTextBoxColumn.HeaderText = "DestinationStartAddress";
             this.destinationStartAddressDataGridViewTextBoxColumn.Name = "destinationStartAddressDataGridViewTextBoxColumn";
             // 
-            // openFileDialog1
+            // ConfigurationbindingSource
             // 
-            this.openFileDialog1.Filter = "Configuration|*.xml";
+            this.ConfigurationbindingSource.DataMember = "Configuration";
+            this.ConfigurationbindingSource.DataSource = this.configurationDataSet1;
+            this.ConfigurationbindingSource.AddingNew += new System.ComponentModel.AddingNewEventHandler(this.ConfigurationbindingSource_AddingNew);
             // 
-            // saveFileDialog1
+            // configurationDataSet1
             // 
-            this.saveFileDialog1.FileName = "Configuration.xml";
-            this.saveFileDialog1.Filter = "Configuration|*.xml";
-            // 
-            // openFileDialog2
-            // 
-            this.openFileDialog2.Filter = "Binary files|*.bin";
-            // 
-            // saveFileDialog2
-            // 
-            this.saveFileDialog2.Filter = "Binary files|*.bin";
+            this.configurationDataSet1.DataSetName = "ConfigurationDataSet";
+            this.configurationDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Form1
             // 
@@ -403,9 +404,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.ConfigurationbindingNavigator)).EndInit();
             this.ConfigurationbindingNavigator.ResumeLayout(false);
             this.ConfigurationbindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ConfigurationdataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConfigurationbindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.configurationDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ConfigurationdataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -437,7 +438,6 @@
         private System.Windows.Forms.BindingSource ConfigurationbindingSource;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripLabel defaultSourcetoolStripLabel1;
-        private System.Windows.Forms.ToolStripTextBox defaultSourcePath;
         private System.Windows.Forms.ToolStripLabel defaultDestinationtoolStripLabel2;
         private System.Windows.Forms.ToolStripTextBox defaultDestinationPath;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
@@ -453,6 +453,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn destinationStartAddressDataGridViewTextBoxColumn;
         private System.Windows.Forms.OpenFileDialog openFileDialog2;
         private System.Windows.Forms.SaveFileDialog saveFileDialog2;
+        private System.Windows.Forms.ToolStripTextBox defaultSourcePath;
     }
 }
 
