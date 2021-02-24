@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ConfigurationDataSet" targetNamespace="http://tempuri.org/ConfigurationDataSet.xsd" xmlns:mstns="http://tempuri.org/ConfigurationDataSet.xsd" xmlns="http://tempuri.org/ConfigurationDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ConfigurationDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ConfigurationDataSet" msprop:Generator_UserDSName="ConfigurationDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Configuration" msprop:Generator_TableClassName="ConfigurationDataTable" msprop:Generator_TableVarName="tableConfiguration" msprop:Generator_TablePropName="Configuration" msprop:Generator_RowDeletingName="ConfigurationRowDeleting" msprop:Generator_RowChangingName="ConfigurationRowChanging" msprop:Generator_RowEvHandlerName="ConfigurationRowChangeEventHandler" msprop:Generator_RowDeletedName="ConfigurationRowDeleted" msprop:Generator_UserTableName="Configuration" msprop:Generator_RowChangedName="ConfigurationRowChanged" msprop:Generator_RowEvArgName="ConfigurationRowChangeEvent" msprop:Generator_RowClassName="ConfigurationRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
+              <xs:element name="SourceFilePath" msprop:Generator_ColumnVarNameInTable="columnSourceFilePath" msprop:Generator_ColumnPropNameInRow="SourceFilePath" msprop:Generator_ColumnPropNameInTable="SourceFilePathColumn" msprop:Generator_UserColumnName="SourceFilePath" type="xs:string" minOccurs="0" />
+              <xs:element name="DestinationFilePath" msprop:Generator_ColumnVarNameInTable="columnDestinationFilePath" msprop:Generator_ColumnPropNameInRow="DestinationFilePath" msprop:Generator_ColumnPropNameInTable="DestinationFilePathColumn" msprop:Generator_UserColumnName="DestinationFilePath" type="xs:string" minOccurs="0" />
+              <xs:element name="SourceStartAddress" msprop:Generator_ColumnVarNameInTable="columnSourceStartAddress" msprop:Generator_ColumnPropNameInRow="SourceStartAddress" msprop:Generator_ColumnPropNameInTable="SourceStartAddressColumn" msprop:Generator_UserColumnName="SourceStartAddress" type="xs:string" minOccurs="0" />
+              <xs:element name="SourceEndAddress" msprop:Generator_ColumnVarNameInTable="columnSourceEndAddress" msprop:Generator_ColumnPropNameInRow="SourceEndAddress" msprop:Generator_ColumnPropNameInTable="SourceEndAddressColumn" msprop:Generator_UserColumnName="SourceEndAddress" type="xs:string" minOccurs="0" />
+              <xs:element name="SourceLenght" msprop:Generator_ColumnVarNameInTable="columnSourceLenght" msprop:Generator_ColumnPropNameInRow="SourceLenght" msprop:Generator_ColumnPropNameInTable="SourceLenghtColumn" msprop:Generator_UserColumnName="SourceLenght" type="xs:string" minOccurs="0" />
+              <xs:element name="DestinationStartAddress" msprop:Generator_ColumnVarNameInTable="columnDestinationStartAddress" msprop:Generator_ColumnPropNameInRow="DestinationStartAddress" msprop:Generator_ColumnPropNameInTable="DestinationStartAddressColumn" msprop:Generator_UserColumnName="DestinationStartAddress" type="xs:string" minOccurs="0" />
+              <xs:element name="SectionName" msprop:Generator_ColumnVarNameInTable="columnSectionName" msprop:Generator_ColumnPropNameInRow="SectionName" msprop:Generator_ColumnPropNameInTable="SectionNameColumn" msprop:Generator_UserColumnName="SectionName" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Configuration" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
